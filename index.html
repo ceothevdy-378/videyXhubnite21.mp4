@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Watch Video</title>
+  <title>Girl Of Your Dreams</title>
   <style>
     body {
       margin: 0;
@@ -28,6 +28,7 @@
       width: 90vw;
       text-align: center;
       z-index: 2;
+      position: relative;
     }
     h1 {
       font-size: 2.1rem;
@@ -40,6 +41,7 @@
     .netflix-btn {
       display: inline-block;
       margin-top: 24px;
+      margin-bottom: 20px;
       padding: 16px 40px;
       background: linear-gradient(90deg, #e50914 60%, #ff6f00 100%);
       color: #fff;
@@ -58,17 +60,16 @@
       background: #b0060c;
       transform: scale(1.05);
     }
-    /* Ad banner at the top */
-    .ad-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      z-index: 100;
+    /* Ad area under Play Now button */
+    .ad-area {
+      width: 100%;
+      max-width: 320px;
+      margin: 0 auto 18px auto;
+      padding: 0;
       background: rgba(20, 20, 20, 0.97);
-      border-bottom: 3px solid #e50914;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.22);
-      padding: 10px 0 2px 0;
+      border-radius: 10px;
+      border: 2px solid #e50914;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.12);
       text-align: center;
     }
     /* Histats counter below main content */
@@ -90,30 +91,30 @@
         padding: 12px 18vw;
         font-size: 1rem;
       }
-      .ad-overlay {
-        padding: 4px 0 2px 0;
+      .ad-area {
+        max-width: 98vw;
       }
     }
   </style>
 </head>
 <body>
-  <!-- Ad banner at the top of the page -->
-  <div class="ad-overlay">
-    <script type="text/javascript">
-      atOptions = {
-        'key' : '4a2fc598ebbbdbc95eb3bef73798c939',
-        'format' : 'iframe',
-        'height' : 50,
-        'width' : 320,
-        'params' : {}
-      };
-    </script>
-    <script type="text/javascript" src="//www.highperformanceformat.com/4a2fc598ebbbdbc95eb3bef73798c939/invoke.js"></script>
-  </div>
   <!-- Main content area -->
   <div class="main-content">
     <h1>Watch Video</h1>
     <a class="netflix-btn" href="https://creatorvideyco-mp4.github.io/videyXhub20.mp4" target="_blank">Play Now</a>
+    <!-- Ad directly below the Play Now button -->
+    <div class="ad-area">
+      <script type="text/javascript">
+        atOptions = {
+          'key' : '4a2fc598ebbbdbc95eb3bef73798c939',
+          'format' : 'iframe',
+          'height' : 50,
+          'width' : 320,
+          'params' : {}
+        };
+      </script>
+      <script type="text/javascript" src="//www.highperformanceformat.com/4a2fc598ebbbdbc95eb3bef73798c939/invoke.js"></script>
+    </div>
     <div id="histats_counter"></div>
   </div>
   <!-- Histats.com Counter -->
